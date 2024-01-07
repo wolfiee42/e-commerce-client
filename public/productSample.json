@@ -1,0 +1,26 @@
+[
+    {
+        "image": "../src/assets/belt.png",
+        "title": "Item 1",
+        "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum reiciendis eaque eligendi. Possimus omnis soluta.",
+        "price": 24.99
+    },
+    {
+        "image": "../src/assets/bag.png",
+        "title": "Item 2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero libero, tempora velit pariatur nobis cupiditate cum.",
+        "price": 24.99
+    },
+    {
+        "image": "../src/assets/sandal.png",
+        "title": "Item 3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.",
+        "price": 24.99
+    },
+    {
+        "image": "../src/assets/formal.png",
+        "title": "Item 4",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore alias. Omnis id minima labore?",
+          "price": 24.99
+    }
+]

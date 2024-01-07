@@ -1,6 +1,7 @@
 import BannerSec from "./BannerSec";
 import CategorySec from "./CategorySec";
 import FeaturedItem from "./FeaturedItem";
+import ProductSample from "./ProductSample";
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <BannerSec />
             <CategorySec />
+            <ProductSample />
             <FeaturedItem />
         </div>
     );
