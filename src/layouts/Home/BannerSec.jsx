@@ -7,7 +7,7 @@ const BannerSec = () => {
     return (
         <div className="bg-[#E0F5EB]" >
             <Container>
-                <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-10 md:px-10">
+                <div className="flex flex-col-reverse md:flex-row justify-center items-center md:gap-10 md:px-10 min-h-[70vh]">
                     <div className=" space-y-1 md:space-y-2 lg:space-y-3">
                         <h2 className="text-xl md:text-3xl lg:text-5xl">New Arrivals</h2>
                         <h1 className="text-3xl md:text-5xl lg:text-7xl font-medium md:font-semibold lg:font-bold uppercase">Big Sale!</h1>
