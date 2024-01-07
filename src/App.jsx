@@ -4,7 +4,7 @@ import NavBar from "./components/Navigation bar/NavBar"
 function App() {
 
   return (
-    <div className="bg-[#D0F0E1]">
+    <div>
       <NavBar />
       <Outlet />
     </div>

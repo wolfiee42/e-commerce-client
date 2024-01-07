@@ -1,9 +1,10 @@
+import BannerSec from "./BannerSec";
 
 
 const Home = () => {
     return (
-        <div className="pt-20">
-            <h1>reporting from home.</h1>
+        <div>
+            <BannerSec />
         </div>
     );
 };
