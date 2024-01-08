@@ -13,10 +13,10 @@ const CategorySec = () => {
             <SectionTitle sectionTitle="Products" />
             <Marquee pauseOnHover speed={70} delay={1.1}>
                 <div className='flex gap-5 mb-10'>
-                    <img className='w-[20%] mx-auto' src={formal} alt="" />
-                    <img className='w-[20%] mx-auto' src={bag} alt="" />
-                    <img className='w-[20%] mx-auto' src={sandal} alt="" />
-                    <img className='w-[20%] mx-auto' src={belt} alt="" />
+                    <img className='w-[150px] md:w-[200px] lg:w-[20%] md:mx-auto' src={formal} alt="" />
+                    <img className='w-[150px] md:w-[200px] lg:w-[20%] md:mx-auto' src={bag} alt="" />
+                    <img className='w-[150px] md:w-[200px] lg:w-[20%] md:mx-auto' src={sandal} alt="" />
+                    <img className='w-[150px] md:w-[200px] mr-2 md:mr-4 lg:mr-0 lg:w-[20%] md:mx-auto' src={belt} alt="" />
                 </div>
             </Marquee>
         </Container>
