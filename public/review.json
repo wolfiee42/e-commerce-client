@@ -1,0 +1,39 @@
+[
+    {
+      "image": "../src/assets/pro1.png",
+      "name": "Product 1",
+      "review": "Incredibly comfortable sneakers! Perfect for long walks. Stylish design and great support. Highly recommend!",
+      "rating": 4.5
+    },
+    {
+      "image": "../src/assets/pro2.jpeg",
+      "name": "Product 2",
+      "review": "High-quality leather belt, stylish and durable. Adds a touch of elegance to any outfit. Very satisfied with the purchase.",
+      "rating": 5.0
+    },
+    {
+      "image": "../src/assets/pro3.jpeg",
+      "name": "Product 3",
+      "review": "Stylish and spacious backpack. Love the design and functionality. Perfect for daily use. Highly recommended!",
+      "rating": 3.8
+    },
+    {
+      "image": "../src/assets/pro4.jpeg",
+      "name": "Product 4",
+      "review": "Exceptional running shoes! Lightweight, great support, and excellent grip. Improved my running experience. Highly satisfied.",
+      "rating": 4.2
+    },
+    {
+      "image": "../src/assets/pro5.jpeg",
+      "name": "Product 5",
+      "review": "Beautiful leather crossbody bag. Perfect size for essentials. Elegant and versatile. A must-have accessory. Love it!",
+      "rating": 4.7
+    },
+    {
+      "image": "../src/assets/pro3.jpeg",
+      "name": "Product 6",
+      "review": "Sturdy and stylish canvas belt. Fits well and complements casual outfits. Great value for money. Highly recommend!",
+      "rating": 3.5
+    }
+  ]
+  
