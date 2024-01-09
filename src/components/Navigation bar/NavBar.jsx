@@ -27,7 +27,7 @@ const NavBar = () => {
     </>
     return (
             <Container>
-                <div className="navbar px-10 md:py-3">
+                <div className="navbar px-10 md:py-3 bg-[#6BB379] rounded-b-lg">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">

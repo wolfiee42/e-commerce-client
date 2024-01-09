@@ -6,7 +6,7 @@ import bannerIMG from "../../assets/bannerIMG.png"
 const BannerSec = () => {
     return (
         <Container>
-            <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 md:px-10 min-h-[70vh] bg-[#E0F5EB] rounded-md">
+            <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 md:px-10 min-h-[70vh]  rounded-md">
                 <div className=" space-y-1 md:space-y-2 lg:space-y-3">
                     <h2 className="text-xl md:text-3xl lg:text-5xl">New Arrivals</h2>
                     <h1 className="text-3xl md:text-5xl lg:text-7xl font-medium md:font-semibold lg:font-bold uppercase">Big Sale!</h1>

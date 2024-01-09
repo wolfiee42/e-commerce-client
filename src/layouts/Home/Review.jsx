@@ -16,7 +16,7 @@ const Review = () => {
     return (
         <Container>
             <SectionTitle sectionTitle="Testimonials" />
-            <div className='grid grid-cols-3 gap-10 mb-10'> 
+            <div className='max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10'> 
                 {
                     testimonials && testimonials.map((testimonial, index) => <ReviewSingle key={index} testimonial={testimonial} />)
                 }
