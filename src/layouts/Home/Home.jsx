@@ -1,5 +1,6 @@
 import BannerSec from "./BannerSec";
 import CategorySec from "./CategorySec";
+import ContactUs from "./ContactUs";
 import FeaturedItem from "./FeaturedItem";
 import ProductSample from "./ProductSample";
 import Review from "./Review";
@@ -13,6 +14,7 @@ const Home = () => {
             <ProductSample />
             <FeaturedItem />
             <Review />
+            <ContactUs />
         </div>
     );
 };
