@@ -81,12 +81,12 @@ const NavBar = () => {
                             <div tabIndex={0} role="button">
                                 <div className="avatar hover:ring hover:ring-[#474A2C] hover:ring-offset-base-100 hover:ring-offset-2 hover:rounded-full">
                                     <div className="w-16 rounded-[50%]">
-                                        <img src={user && user.photoURL} alt="Profile picture" />hi
+                                        <img src={user?.photoURL} alt="Profile picture" />hi
                                     </div>
                                 </div>
                             </div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><a>{user && user.displayName}</a></li>
+                                <li><a className="uppercase">{user && user?.displayName}</a></li>
                                 <li><button onClick={handleLogout}>Log Out</button></li>
                             </ul>
                         </div>
