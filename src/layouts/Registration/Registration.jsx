@@ -4,6 +4,10 @@ import Container from "../../components/Container/Container";
 import { RiLoginCircleFill } from "react-icons/ri";
 import { useForm } from "react-hook-form"
 import useAxiosPublic from "../../utilities/useAxiosPublic";
+import useAuth from "../../utilities/useAuth";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Registration = () => {
     const defaultOptions = {
@@ -17,8 +21,8 @@ const Registration = () => {
     const imgKey = import.meta.env.VITE_imgKey;
     const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgKey}`;
     const axiosPublic = useAxiosPublic();
-
-
+    const { register: signup, addProfileNameAndPicture } = useAuth();
+    const navigate = useNavigate()
     const {
         register,
         handleSubmit
@@ -35,7 +39,16 @@ const Registration = () => {
             }
         })
         const profilePicture = res.data.data.display_url;
+        const name = data.name;
+        const email = data.email;
+        const password = data.password;
 
+        signup(email, password)
+            .then((res) => {
+                addProfileNameAndPicture(name, profilePicture)
+                console.log(res.user);
+                navigate('/')
+            })
 
     }
 
