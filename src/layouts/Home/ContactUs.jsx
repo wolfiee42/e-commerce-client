@@ -51,7 +51,7 @@ const ContactUs = () => {
                         <textarea name="message" type="message" placeholder="Write Your Message" className="max-w-full min-h-28 px-5 py-2 rounded-lg border-b-[2px] border-l-4 border-l-[#6BB379] mt-4" required />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#9BDEAC] lg:bg-[#9BDEAC] text-white lg:text-white border-b-2 lg:border-b-2 border-[#6BB379] lg:border-[#6BB379] lg:hover:bg-[#6BB379] hover:border-none lg:hover:border-none">Send</button>
+                        <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">Send</button>
                     </div>
                 </form>
             </div>

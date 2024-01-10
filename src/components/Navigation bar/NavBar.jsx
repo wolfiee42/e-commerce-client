@@ -24,6 +24,13 @@ const NavBar = () => {
                 opacity: isActive ? 1 : ""
             })} to="/login">Login</NavLink>
         </li>
+        <li>
+            <NavLink style={({ isActive }) => ({
+                backgroundColor: isActive ? "#636940" : "",
+                borderBottom: isActive ? "#474A2C solid 2px" : '',
+                opacity: isActive ? 1 : ""
+            })} to="/registration">Registration</NavLink>
+        </li>
     </>
     return (
             <Container>
