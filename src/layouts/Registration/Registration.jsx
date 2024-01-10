@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import useAxiosPublic from "../../utilities/useAxiosPublic";
 import useAuth from "../../utilities/useAuth";
 import { useNavigate } from "react-router-dom";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const Registration = () => {
@@ -44,10 +44,10 @@ const Registration = () => {
         const password = data.password;
 
         signup(email, password)
-            .then((res) => {
+            .then(res => {
                 addProfileNameAndPicture(name, profilePicture)
-                console.log(res.user);
                 navigate('/')
+                res.user && toast.success('User Created Successfully!')
             })
 
     }
@@ -80,6 +80,10 @@ const Registration = () => {
                         </div>
                     </form>
                 </div>
+                <Toaster
+                    position="top-right"
+                    reverseOrder={false}
+                />
             </div>
         </Container>
     );
