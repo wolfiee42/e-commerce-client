@@ -3,6 +3,7 @@ import registration from "../../assets/registration.json"
 import Container from "../../components/Container/Container";
 import { RiLoginCircleFill } from "react-icons/ri";
 import { useForm } from "react-hook-form"
+import useAxiosPublic from "../../utilities/useAxiosPublic";
 
 const Registration = () => {
     const defaultOptions = {
@@ -13,15 +14,30 @@ const Registration = () => {
             preserveAspectRatio: 'xMidYMid slice'
         }
     };
+    const imgKey = import.meta.env.VITE_imgKey;
+    const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgKey}`;
+    const axiosPublic = useAxiosPublic();
+
 
     const {
         register,
-        handleSubmit,
-        watch,
-        formState: { errors },
+        handleSubmit
     } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = async (data) => {
+        // some random syntax which i must follow 
+        const img = { image: data.image[0] };
+
+        // uploading to imgbb
+        const res = await axiosPublic.post(imgHostingApi, img, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        })
+        const profilePicture = res.data.data.display_url;
+
+
+    }
 
     return (
         <Container>
@@ -37,9 +53,9 @@ const Registration = () => {
                         <div className="form-control">
                             <input {...register("name")} type="text" placeholder="Your Name" className="max-w-full min-h-12 px-5 rounded-lg border-b-[2px] border-b-[#6BB379] border-l-4 border-l-[#6BB379] mt-4" required />
                         </div>
-                        {/* <div className="form-control">
-                            <input type="name" placeholder="Your Name" name="user_name" className="max-w-full min-h-12 px-5 rounded-lg border-b-[2px] border-b-[#6BB379] border-l-4 border-l-[#6BB379] mt-4" required />
-                        </div> */}
+                        <div className="form-control">
+                            <input {...register("image")} type="file" className="file-input file-input-ghost  max-w-full min-h-12 px-5 rounded-lg border-t-0 border-r-0 border-b-[2px] border-b-[#6BB379] border-l-4 border-l-[#6BB379] mt-4" />
+                        </div>
                         <div className="form-control">
                             <input {...register("email")} type="email" placeholder="Your Email Address" className="max-w-full min-h-12 px-5 rounded-lg border-b-[2px] border-b-[#6BB379] border-l-4 border-l-[#6BB379] mt-4" required />
                         </div>
