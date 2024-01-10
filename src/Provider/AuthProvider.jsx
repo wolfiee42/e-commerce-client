@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext } from "react";
 import auth from "../firebase/firebase.confiq"
-import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -15,11 +15,18 @@ const AuthProvider = ({ children }) => {
     const register = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
+
+
     const addProfileNameAndPicture = (name, picture) => {
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: picture
         })
     }
+
+    const userLogout = () => {
+        return signOut(auth);
+    }
+
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, currentuser => {
             console.log("spying on ", currentuser);
@@ -30,7 +37,7 @@ const AuthProvider = ({ children }) => {
         }
     })
 
-    const authinfo = { register, addProfileNameAndPicture, user }
+    const authinfo = { register, addProfileNameAndPicture, user, userLogout }
     return (
         <AuthContext.Provider value={authinfo}>
             {children}
