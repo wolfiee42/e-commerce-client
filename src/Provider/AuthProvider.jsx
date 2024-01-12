@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext } from "react";
 import auth from "../firebase/firebase.confiq"
-import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -12,19 +12,31 @@ const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState('')
 
+
+    const AuthofGoogle = new GoogleAuthProvider();
+
+
     const register = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-    const loginUser = (email, password) => {
-        return signInWithEmailAndPassword(auth, email, password)
-    }
 
     const addProfileNameAndPicture = (name, picture) => {
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: picture
         })
     }
+
+
+    const loginUser = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+
+    const loginWithGoogle = () => {
+        return signInWithPopup(auth, AuthofGoogle)
+    }
+
 
     const userLogout = () => {
         return signOut(auth);
@@ -40,7 +52,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const authinfo = { register, addProfileNameAndPicture, user, userLogout, loginUser }
+    const authinfo = { register, addProfileNameAndPicture, user, userLogout, loginUser, loginWithGoogle }
     return (
         <AuthContext.Provider value={authinfo}>
             {children}

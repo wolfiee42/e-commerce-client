@@ -6,10 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import Lottie from "react-lottie"
 import loginPic from "../../assets/login.json"
+import { FaGoogle } from "react-icons/fa";
+
+
 
 
 const Login = () => {
-    const { loginUser } = useAuth();
+    const { loginUser, loginWithGoogle } = useAuth();
     const navigate = useNavigate()
     const {
         register,
@@ -25,13 +28,14 @@ const Login = () => {
         }
     };
 
+    // form login
     const onSubmit = async (data) => {
         const email = data.email;
         const password = data.password;
 
         loginUser(email, password)
             .then(res => {
-                res.user && toast.success('User Created Successfully!')
+                res.user && toast.success('User Logged in Successfully!')
                 navigate('/')
             })
             .catch(error => {
@@ -39,12 +43,21 @@ const Login = () => {
             })
     }
 
+
+    const googleLogin = () => {
+        loginWithGoogle()
+            .then(res => {
+                res.user && toast.success('User Logged in Successfully!')
+                navigate('/')
+            })
+    }
+
     return (
         <Container>
             <Toaster
-                    position="top-right"
-                    reverseOrder={false}
-                />
+                position="top-right"
+                reverseOrder={false}
+            />
             <div className="min-h-screen flex flex-row-reverse justify-center items-center">
                 <div className="w-1/2">
                     <Lottie options={defaultOptions} />
@@ -67,7 +80,17 @@ const Login = () => {
                             <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">Login <RiLoginCircleFill className="text-xl" /> </button>
                         </div>
                     </form>
-                    <button className="w-[80%] uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google</button>
+                    {/* social login */}
+                    <div className="flex justify-around">
+                        <div className="flex justify-center items-center gap-1" onClick={googleLogin}>
+                            <p className="text-xl font-semibold">Login with Google</p>
+                            <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google <FaGoogle className="text-xl" /></button>
+                        </div>
+                        <div className="flex justify-center items-center gap-1">
+                            <p className="text-xl font-semibold">Login with Google</p>
+                            <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Container>
