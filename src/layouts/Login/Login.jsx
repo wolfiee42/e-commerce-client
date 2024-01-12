@@ -6,13 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import Lottie from "react-lottie"
 import loginPic from "../../assets/login.json"
-import { FaGoogle } from "react-icons/fa";
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
 
 
 
 
 const Login = () => {
-    const { loginUser, loginWithGoogle } = useAuth();
+    const { loginUser, loginWithGoogle, loginWithFacebook } = useAuth();
     const navigate = useNavigate()
     const {
         register,
@@ -52,6 +52,15 @@ const Login = () => {
             })
     }
 
+
+    const FacebookLogin = () => {
+        loginWithFacebook()
+            .then(res => {
+                res.user && toast.success('User Logged in Successfully!')
+                navigate('/')
+            })
+    }
+
     return (
         <Container>
             <Toaster
@@ -83,12 +92,12 @@ const Login = () => {
                     {/* social login */}
                     <div className="flex justify-around">
                         <div className="flex justify-center items-center gap-1" onClick={googleLogin}>
-                            <p className="text-xl font-semibold">Login with Google</p>
+                            <p className="font-semibold">Login with Google</p>
                             <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google <FaGoogle className="text-xl" /></button>
                         </div>
                         <div className="flex justify-center items-center gap-1">
-                            <p className="text-xl font-semibold">Login with Google</p>
-                            <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google</button>
+                            <p className="font-semibold">Login with Facebook</p>
+                            <button onClick={FacebookLogin} className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">Facebook <FaFacebookF className="text-xl" /></button>
                         </div>
                     </div>
                 </div>

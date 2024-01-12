@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext } from "react";
 import auth from "../firebase/firebase.confiq"
-import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -14,6 +14,7 @@ const AuthProvider = ({ children }) => {
 
 
     const AuthofGoogle = new GoogleAuthProvider();
+    const AuthofFacebook = new FacebookAuthProvider();
 
 
     const register = (email, password) => {
@@ -37,6 +38,10 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, AuthofGoogle)
     }
 
+    const loginWithFacebook = () => {
+        return signInWithPopup(auth, AuthofFacebook)
+    }
+
 
     const userLogout = () => {
         return signOut(auth);
@@ -52,7 +57,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    const authinfo = { register, addProfileNameAndPicture, user, userLogout, loginUser, loginWithGoogle }
+    const authinfo = { register, addProfileNameAndPicture, user, userLogout, loginUser, loginWithGoogle, loginWithFacebook }
     return (
         <AuthContext.Provider value={authinfo}>
             {children}
