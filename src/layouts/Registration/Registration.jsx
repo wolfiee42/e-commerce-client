@@ -7,6 +7,7 @@ import useAxiosPublic from "../../utilities/useAxiosPublic";
 import useAuth from "../../utilities/useAuth";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
+import { FaGoogle } from "react-icons/fa";
 
 
 const Registration = () => {
@@ -21,7 +22,7 @@ const Registration = () => {
     const imgKey = import.meta.env.VITE_imgKey;
     const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgKey}`;
     const axiosPublic = useAxiosPublic();
-    const { register: signup, addProfileNameAndPicture } = useAuth();
+    const { register: signup, addProfileNameAndPicture, loginWithGoogle } = useAuth();
     const navigate = useNavigate()
     const { register, handleSubmit } = useForm();
 
@@ -52,6 +53,14 @@ const Registration = () => {
                 toast.error(error.message);
             })
 
+    }
+
+    const googleLogin = () => {
+        loginWithGoogle()
+            .then(res => {
+                res.user && toast.success('User Logged in Successfully!')
+                navigate('/')
+            })
     }
 
     return (
@@ -88,6 +97,18 @@ const Registration = () => {
                             <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">Register <RiLoginCircleFill className="text-xl" /> </button>
                         </div>
                     </form>
+
+                    {/* social login */}
+                    <div className="flex justify-center gap-2">
+                        <div className="flex justify-center items-center gap-1" onClick={googleLogin}>
+                            <p className="text-xl font-semibold">Login with Google</p>
+                            <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google <FaGoogle className="text-xl" /></button>
+                        </div>
+                        <div className="flex justify-center items-center gap-1">
+                            <p className="text-xl font-semibold">Login with Google</p>
+                            <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Container>
