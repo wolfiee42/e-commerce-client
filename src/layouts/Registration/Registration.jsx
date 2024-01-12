@@ -48,6 +48,9 @@ const Registration = () => {
                 navigate('/')
                 res.user && toast.success('User Created Successfully!')
             })
+            .catch(error => {
+                toast.error(error.message);
+            })
 
     }
 

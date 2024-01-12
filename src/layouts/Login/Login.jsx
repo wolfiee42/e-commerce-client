@@ -33,7 +33,9 @@ const Login = () => {
             .then(res => {
                 res.user && toast.success('User Created Successfully!')
                 navigate('/')
-
+            })
+            .catch(error => {
+                toast.error(error.message);
             })
     }
 
@@ -65,6 +67,7 @@ const Login = () => {
                             <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">Login <RiLoginCircleFill className="text-xl" /> </button>
                         </div>
                     </form>
+                    <button className="w-[80%] uppercase btn btn-xs md:btn-sm lg:btn bg-[#6BB379] lg:bg-[#6BB379] text-white lg:text-white border-b-2 lg:border-b-2 border-[#9BDEAC] lg:border-[#9BDEAC] lg:hover:bg-[#9BDEAC] hover:border-none lg:hover:border-none">google</button>
                 </div>
             </div>
         </Container>

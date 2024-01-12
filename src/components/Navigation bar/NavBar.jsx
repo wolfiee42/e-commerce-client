@@ -6,6 +6,8 @@ import userPic from "../../assets/user.json"
 
 
 const NavBar = () => {
+    const { user, userLogout } = useAuth();
+
     const navitems = <>
         <li>
             <NavLink style={({ isActive }) => ({
@@ -21,20 +23,27 @@ const NavBar = () => {
                 opacity: isActive ? 1 : ""
             })} to="/products">Products</NavLink>
         </li>
-        <li>
+        {user && <li>
+            <NavLink style={({ isActive }) => ({
+                backgroundColor: isActive ? "#636940" : "",
+                borderBottom: isActive ? "#474A2C solid 2px" : '',
+                opacity: isActive ? 1 : ""
+            })} to="/dashboard">Dashboard</NavLink>
+        </li>}
+        {!user && <li>
             <NavLink style={({ isActive }) => ({
                 backgroundColor: isActive ? "#636940" : "",
                 borderBottom: isActive ? "#474A2C solid 2px" : '',
                 opacity: isActive ? 1 : ""
             })} to="/login">Login</NavLink>
-        </li>
-        <li>
+        </li>}
+        {!user && <li>
             <NavLink style={({ isActive }) => ({
                 backgroundColor: isActive ? "#636940" : "",
                 borderBottom: isActive ? "#474A2C solid 2px" : '',
                 opacity: isActive ? 1 : ""
             })} to="/registration">Registration</NavLink>
-        </li>
+        </li>}
     </>
 
     const defaultOptions = {
@@ -45,8 +54,6 @@ const NavBar = () => {
             preserveAspectRatio: 'xMidYMid slice'
         }
     };
-
-    const { user, userLogout } = useAuth();
 
     const handleLogout = () => {
         userLogout();
@@ -75,7 +82,7 @@ const NavBar = () => {
                     {
                         !user ? <div className="avatar">
                             <div className="w-16 rounded-full">
-                                <Lottie options={defaultOptions}  />
+                                <Lottie options={defaultOptions} />
                             </div>
                         </div> : <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="button">
