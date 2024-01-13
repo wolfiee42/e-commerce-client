@@ -26,6 +26,9 @@ const Products = () => {
             <SectionTitle sectionTitle="Todays Offer" />
             <ProductSection items={product} />
             <ProductSection items={product} img={formalBan} title={"Formal Shoes"}/>
+            <ProductSection items={product} img={bagBan} title={"Bags"}/>
+            <ProductSection items={product} img={casualBan} title={"Sport Shows"}/>
+            <ProductSection items={product} img={beltBan} title={"Leather  belts"}/>
         </Container>
     );
 };
