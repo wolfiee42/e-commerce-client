@@ -10,3 +10,8 @@ export const reviews = async () => {
     const res = await axios.get('../../public/review.json')
     return res.data;
 }
+
+export const products = async () => {
+    const res = await axios.get("../../public/ProductSectionDummy.json")
+    return res.data;
+}
