@@ -25,14 +25,17 @@ const FeaturedItem = () => {
         month: 'short', // Full month name
         day: 'numeric', // Day of the month
         year: 'numeric', // Full year
-      });
+    });
 
 
     return (
         <Container>
             <div style={backgroundIMage} className="min-h-fit my-4 md:my-8 lg:my-10">
                 <div>
-                    <SectionTitle sectionTitle="Order Now" />
+                    <div className="md:pt-[30px] md:pb-[50px] lg:pt-[50px] lg:pb-[100px]">
+                        <SectionTitle sectionTitle="Order Now" />
+                    </div>
+
                     <div className="flex flex-col md:flex-row justify-center items-center md:gap-5 md:px-10 lg:gap-10 lg:px-20 pb-5 lg:pb-10">
                         <div className="w-1/2">
                             <img src={salesImg} alt="" />

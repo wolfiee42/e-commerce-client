@@ -35,7 +35,10 @@ const ContactUs = () => {
 
     return (
         <Container>
-            <SectionTitle sectionTitle="How to reach me" />
+            <div className="md:pt-[30px] md:pb-[50px] lg:pt-[50px] lg:pb-[100px]">
+                <SectionTitle sectionTitle="How to reach me" />
+            </div>
+
             <div className="flex flex-col md:flex-row justify-center items-center md:-mt-14">
                 <div className="w-1/2">
                     <Lottie options={defaultOptions} />

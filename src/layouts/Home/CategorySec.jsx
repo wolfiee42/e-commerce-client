@@ -10,7 +10,10 @@ import Marquee from "react-fast-marquee";
 const CategorySec = () => {
     return (
         <Container>
-            <SectionTitle sectionTitle="Products" />
+            <div className='md:pt-[30px] md:pb-[50px] lg:pt-[50px] lg:pb-[100px]'>
+                <SectionTitle sectionTitle="Products" />
+            </div>
+
             <Marquee pauseOnHover speed={70} delay={1.1}>
                 <div className='flex gap-5 mb-10'>
                     <img className='w-[150px] md:w-[200px] lg:w-[20%] md:mx-auto' src={formal} alt="" />
