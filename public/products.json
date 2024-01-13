@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Elite Oxfords",
+        "price": 49.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/yRTcmHG/formal1.png"
+    },
+    {
+        "name": "Stylish Loafers",
+        "price": 59.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/SfbM9z1/formal2.png"
+    },
+    {
+        "name": "Classic Derbys",
+        "price": 79.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/jTFHnVT/formal3.png"
+    },
+    {
+        "name": "Pinnacle Monks",
+        "price": 89.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/mSpcHbL/formal4.png"
+    },
+    {
+        "name": "Timeless Cap-Toes",
+        "price": 99.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/TWMyknR/formal5.png"
+    },
+    {
+        "name": "Corporate Wings",
+        "price": 109.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/BC4P3Zq/formal6.png"
+    },
+    {
+        "name": "Regal Brogues",
+        "price": 29.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/72FYYfT/formal7.png"
+    },
+    {
+        "name": "Suave Slip-ons",
+        "price": 39.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/9vm66bR/formal8.png"
+    },
+    {
+        "name": "Elite Dress Shoes",
+        "price": 149.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/sHZwsV2/formal9.png"
+    },
+    {
+        "name": "Supreme Boots",
+        "price": 169.99,
+        "classification": "Formal",
+        "image": "https://i.ibb.co/ZgKn4Bg/formal10.png"
+    }
+]
