@@ -1,22 +1,21 @@
-import { GiRunningShoe, GiBeltBuckles, GiConverseShoe } from "react-icons/gi";
-import { FaBagShopping } from "react-icons/fa6";
+import { GiRunningShoe, GiBeltBuckles, GiConverseShoe, GiShoppingBag  } from "react-icons/gi";
 
 
 const CategoriesData = [
     {
-        label: "Formal",
+        label: "formal",
         icon: GiRunningShoe,
     },
     {
-        label: "Bag",
-        icon: FaBagShopping,
+        label: "bag",
+        icon: GiShoppingBag,
     },
     {
-        label: "Casual",
+        label: "casual",
         icon: GiConverseShoe,
     },
     {
-        label: "Belt",
+        label: "belt",
         icon: GiBeltBuckles,
     },
 ]
