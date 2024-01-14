@@ -118,5 +118,59 @@
         "price": 119.99,
         "classification": "Bag",
         "image": "https://i.ibb.co/tzbPCfF/bag10.png"
+    },
+    {
+        "name": "Sunset Serenity",
+        "price": 19.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/8g00Ng0/casual1.png"
+    },
+    {
+        "name": "Coastal Breeze",
+        "price": 39.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/7zjpdWX/casual2.png"
+    },
+    {
+        "name": "Tropical Bliss",
+        "price": 49.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/3CKYksX/casual3.png"
+    },
+    {
+        "name": "Sun-Kissed Comfort",
+        "price": 29.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/Tw9HcBr/casual4.png"
+    },
+    {
+        "name": "Seaside Elegance",
+        "price": 34.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/4PYHmKZ/casual5.png"
+    },
+    {
+        "name": "Zen Retreat",
+        "price": 24.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/vxPjrYv/casual6.png"
+    },
+    {
+        "name": "Island Escape",
+        "price": 19.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/dBxTsC6/casual7.png"
+    },
+    {
+        "name": "Boho Chic",
+        "price": 59.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/M9CjBB6/casual8.png"
+    },
+    {
+        "name": "Mirage Slip-Ons",
+        "price": 44.99,
+        "classification": "Casual",
+        "image": "https://i.ibb.co/t3GkHh4/casual19.png"
     }
 ]
