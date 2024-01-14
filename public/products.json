@@ -172,5 +172,29 @@
         "price": 44.99,
         "classification": "Casual",
         "image": "https://i.ibb.co/t3GkHh4/casual19.png"
+    },
+    {
+        "name": "Classic Leather Belt",
+        "price": 29.99,
+        "classification": "Belt",
+        "image": "https://i.ibb.co/TwCzYFM/belt1.png"
+    },
+    {
+        "name": "Fashion Canvas Belt",
+        "price": 19.99,
+        "classification": "Belt",
+        "image": "https://i.ibb.co/p0zRp7W/belt2-removebg-preview.png"
+    },
+    {
+        "name": "Slim Belt with Buckle",
+        "price": 24.99,
+        "classification": "Belt",
+        "image": "https://i.ibb.co/W0xGr68/belt3-removebg-preview.png"
+    },
+    {
+        "name": "Casual Braided Belt",
+        "price": 34.99,
+        "classification": "Belt",
+        "image": "https://i.ibb.co/4dmyqjB/belt4-removebg-preview.png"
     }
 ]
