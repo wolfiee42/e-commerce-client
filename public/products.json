@@ -58,5 +58,65 @@
         "price": 169.99,
         "classification": "Formal",
         "image": "https://i.ibb.co/ZgKn4Bg/formal10.png"
+    },
+    {
+        "name": "Vogue Tote",
+        "price": 79.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/8PVSfNh/bag1.png"
+    },
+    {
+        "name": "Sassy Cross",
+        "price": 49.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/N9qXnT5/bag2.png"
+    },
+    {
+        "name": "Glam Satchel",
+        "price": 59.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/b2xXFn3/bag3.png"
+    },
+    {
+        "name": "Chic Clutch",
+        "price": 89.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/qkbTYqr/bag4.png"
+    },
+    {
+        "name": "Aura Backpack",
+        "price": 69.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/NmCdMfs/bag5.png"
+    },
+    {
+        "name": "Grace Hobo",
+        "price": 39.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/xSxgMVg/bag6.png"
+    },
+    {
+        "name": "Eve Sling",
+        "price": 99.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/n0FxNhq/bag7.png"
+    },
+    {
+        "name": "Mod Bucket",
+        "price": 29.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/3mzNQ9M/bag8.png"
+    },
+    {
+        "name": "Jet Set Tote",
+        "price": 79.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/VDs0kVd/bag9.png"
+    },
+    {
+        "name": "Viva Pouch",
+        "price": 119.99,
+        "classification": "Bag",
+        "image": "https://i.ibb.co/tzbPCfF/bag10.png"
     }
 ]
