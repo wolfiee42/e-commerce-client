@@ -3,19 +3,19 @@ import { GiRunningShoe, GiBeltBuckles, GiConverseShoe, GiShoppingBag  } from "re
 
 const CategoriesData = [
     {
-        label: "formal",
+        label: "Formal",
         icon: GiRunningShoe,
     },
     {
-        label: "bag",
+        label: "Bag",
         icon: GiShoppingBag,
     },
     {
-        label: "casual",
+        label: "Casual",
         icon: GiConverseShoe,
     },
     {
-        label: "belt",
+        label: "Belt",
         icon: GiBeltBuckles,
     },
 ]
