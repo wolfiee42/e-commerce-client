@@ -3,198 +3,231 @@
         "name": "Elite Oxfords",
         "price": 49.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/yRTcmHG/formal1.png"
+        "image": "https://i.ibb.co/yRTcmHG/formal1.png",
+        "desc": "Formal Oxfords for a sophisticated look. "
     },
     {
         "name": "Stylish Loafers",
         "price": 59.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/SfbM9z1/formal2.png"
+        "image": "https://i.ibb.co/SfbM9z1/formal2.png",
+        "desc": "Modern and chic formal loafers."
     },
     {
         "name": "Classic Derbys",
         "price": 79.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/jTFHnVT/formal3.png"
+        "image": "https://i.ibb.co/jTFHnVT/formal3.png",
+        "desc": "Timeless formal derbys for any occasion."
     },
     {
         "name": "Pinnacle Monks",
         "price": 89.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/mSpcHbL/formal4.png"
+        "image": "https://i.ibb.co/mSpcHbL/formal4.png",
+        "desc": "Elegant formal monk strap shoes. "
     },
     {
         "name": "Timeless Cap-Toes",
         "price": 99.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/TWMyknR/formal5.png"
+        "image": "https://i.ibb.co/TWMyknR/formal5.png",
+        "desc": "Formal cap-toe shoes with a touch of class."
     },
     {
         "name": "Corporate Wings",
         "price": 109.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/BC4P3Zq/formal6.png"
+        "image": "https://i.ibb.co/BC4P3Zq/formal6.png",
+        "desc": "Sharp and polished formal wingtip shoes."
     },
     {
         "name": "Regal Brogues",
         "price": 29.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/72FYYfT/formal7.png"
+        "image": "https://i.ibb.co/72FYYfT/formal7.png",
+        "desc": "Classic brogue detailing for a regal look."
     },
     {
         "name": "Suave Slip-ons",
         "price": 39.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/9vm66bR/formal8.png"
+        "image": "https://i.ibb.co/9vm66bR/formal8.png",
+        "desc": "Stylish slip-on shoes for a suave appearance."
     },
     {
         "name": "Elite Dress Shoes",
         "price": 149.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/sHZwsV2/formal9.png"
+        "image": "https://i.ibb.co/sHZwsV2/formal9.png",
+        "desc": "Exceptional formal dress shoes."
     },
     {
         "name": "Supreme Boots",
         "price": 169.99,
         "classification": "Formal",
-        "image": "https://i.ibb.co/ZgKn4Bg/formal10.png"
+        "image": "https://i.ibb.co/ZgKn4Bg/formal10.png",
+        "desc": "High-quality formal boots for a supreme look."
     },
     {
         "name": "Vogue Tote",
         "price": 79.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/8PVSfNh/bag1.png"
+        "image": "https://i.ibb.co/8PVSfNh/bag1.png",
+        "desc": "Stylish tote bag with a touch of vogue. "
     },
     {
         "name": "Sassy Cross",
         "price": 49.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/N9qXnT5/bag2.png"
+        "image": "https://i.ibb.co/N9qXnT5/bag2.png",
+        "desc": "Chic crossbody bag with a sassy flair. "
     },
     {
         "name": "Glam Satchel",
         "price": 59.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/b2xXFn3/bag3.png"
+        "image": "https://i.ibb.co/b2xXFn3/bag3.png",
+        "desc": "Trendy satchel bag with a touch of glam."
     },
     {
         "name": "Chic Clutch",
         "price": 89.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/qkbTYqr/bag4.png"
+        "image": "https://i.ibb.co/qkbTYqr/bag4.png",
+        "desc": "Elegant clutch for a sophisticated look."
     },
     {
         "name": "Aura Backpack",
         "price": 69.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/NmCdMfs/bag5.png"
+        "image": "https://i.ibb.co/NmCdMfs/bag5.png",
+        "desc": "Stylish backpack with an aura of elegance."
     },
     {
         "name": "Grace Hobo",
         "price": 39.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/xSxgMVg/bag6.png"
+        "image": "https://i.ibb.co/xSxgMVg/bag6.png",
+        "desc": "Casual hobo bag with a touch of grace."
     },
     {
         "name": "Eve Sling",
         "price": 99.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/n0FxNhq/bag7.png"
+        "image": "https://i.ibb.co/n0FxNhq/bag7.png",
+        "desc": "Versatile sling bag for a chic look. "
     },
     {
         "name": "Mod Bucket",
         "price": 29.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/3mzNQ9M/bag8.png"
+        "image": "https://i.ibb.co/3mzNQ9M/bag8.png",
+        "desc": "Trendy bucket bag for a modern style."
     },
     {
         "name": "Jet Set Tote",
         "price": 79.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/VDs0kVd/bag9.png"
+        "image": "https://i.ibb.co/VDs0kVd/bag9.png",
+        "desc": "Tote bag for the jet-set lifestyle."
     },
     {
         "name": "Viva Pouch",
         "price": 119.99,
         "classification": "Bag",
-        "image": "https://i.ibb.co/tzbPCfF/bag10.png"
+        "image": "https://i.ibb.co/tzbPCfF/bag10.png",
+        "desc": "Stylish pouch with a vivacious touch. Price: "
     },
     {
         "name": "Sunset Serenity",
         "price": 19.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/8g00Ng0/casual1.png"
+        "image": "https://i.ibb.co/8g00Ng0/casual1.png",
+        "desc": "Casual shoes for a serene sunset stroll."
     },
     {
         "name": "Coastal Breeze",
         "price": 39.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/7zjpdWX/casual2.png"
+        "image": "https://i.ibb.co/7zjpdWX/casual2.png",
+        "desc": "Casual shoes with a refreshing coastal vibe"
     },
     {
         "name": "Tropical Bliss",
         "price": 49.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/3CKYksX/casual3.png"
+        "image": "https://i.ibb.co/3CKYksX/casual3.png",
+        "desc": "Vibrant casual shoes for tropical vibes."
     },
     {
         "name": "Sun-Kissed Comfort",
         "price": 29.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/Tw9HcBr/casual4.png"
+        "image": "https://i.ibb.co/Tw9HcBr/casual4.png",
+        "desc": "Comfortable casual shoes with a sun-kissed touch."
     },
     {
         "name": "Seaside Elegance",
         "price": 34.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/4PYHmKZ/casual5.png"
+        "image": "https://i.ibb.co/4PYHmKZ/casual5.png",
+        "desc": "Elegantly casual shoes with seaside charm."
     },
     {
         "name": "Zen Retreat",
         "price": 24.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/vxPjrYv/casual6.png"
+        "image": "https://i.ibb.co/vxPjrYv/casual6.png",
+        "desc": "Relaxing casual shoes for a zen retreat."
     },
     {
         "name": "Island Escape",
         "price": 19.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/dBxTsC6/casual7.png"
+        "image": "https://i.ibb.co/dBxTsC6/casual7.png",
+        "desc": "Casual shoes perfect for an island escape."
     },
     {
         "name": "Boho Chic",
         "price": 59.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/M9CjBB6/casual8.png"
+        "image": "https://i.ibb.co/M9CjBB6/casual8.png",
+        "desc": "Stylish and bohemian casual shoes."
     },
     {
         "name": "Mirage Slip-Ons",
         "price": 44.99,
         "classification": "Casual",
-        "image": "https://i.ibb.co/t3GkHh4/casual19.png"
+        "image": "https://i.ibb.co/t3GkHh4/casual19.png",
+        "desc": "Casual slip-on shoes with a mirage of style."
     },
     {
         "name": "Classic Leather Belt",
         "price": 29.99,
         "classification": "Belt",
-        "image": "https://i.ibb.co/TwCzYFM/belt1.png"
+        "image": "https://i.ibb.co/TwCzYFM/belt1.png",
+        "desc": "Timeless leather belt for a classic touch."
     },
     {
         "name": "Fashion Canvas Belt",
         "price": 19.99,
         "classification": "Belt",
-        "image": "https://i.ibb.co/p0zRp7W/belt2-removebg-preview.png"
+        "image": "https://i.ibb.co/p0zRp7W/belt2-removebg-preview.png",
+        "desc": "Stylish canvas belt for a trendy look. "
     },
     {
         "name": "Slim Belt with Buckle",
         "price": 24.99,
         "classification": "Belt",
-        "image": "https://i.ibb.co/W0xGr68/belt3-removebg-preview.png"
+        "image": "https://i.ibb.co/W0xGr68/belt3-removebg-preview.png",
+        "desc": "Sleek belt with a fashionable buckle."
     },
     {
         "name": "Casual Braided Belt",
         "price": 34.99,
         "classification": "Belt",
-        "image": "https://i.ibb.co/4dmyqjB/belt4-removebg-preview.png"
+        "image": "https://i.ibb.co/4dmyqjB/belt4-removebg-preview.png",
+        "desc": "Relaxed braided belt for a casual vibe."
     }
 ]

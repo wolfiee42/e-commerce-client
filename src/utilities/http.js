@@ -12,6 +12,6 @@ export const reviews = async () => {
 }
 
 export const products = async () => {
-    const res = await axios.get("../../public/ProductSectionDummy.json")
+    const res = await axios.get(`http://localhost:8000/allproducts`)
     return res.data;
 }

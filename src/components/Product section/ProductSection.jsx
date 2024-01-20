@@ -13,7 +13,7 @@ const ProductSection = ({items, img, title}) => {
                 }
             </div>
             {!title ? "" : <div className=" w-[150px] mx-auto my-5">
-                <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#636940] lg:bg-[#636940] text-white lg:text-white border-b-2 lg:border-b-2 border-[#474A2C] lg:border-[#474A2C] lg:hover:bg-[#555A36] hover:border-none lg:hover:border-none"><Link>Order Now</Link></button>
+                <button className="uppercase btn btn-xs md:btn-sm lg:btn bg-[#636940] lg:bg-[#636940] text-white lg:text-white border-b-2 lg:border-b-2 border-[#474A2C] lg:border-[#474A2C] lg:hover:bg-[#555A36] hover:border-none lg:hover:border-none"><Link to={`/order`}>Order Now</Link></button>
             </div>
                 
             }

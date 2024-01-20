@@ -14,21 +14,28 @@ import bagBan from "../../assets/img/bagBan.jpg"
 
 const Products = () => {
 
-    const product = useProducts();
-    console.log(product);
 
-    // the product which i got from useProduct hook will be filtered here and product section would get diffrent filtered element. but for now i am using dummy products.
+    const material = useProducts();
 
+    const categorizedData = (category) => {
+        return material?.filter(product => product.classification === category);
+    }
+    const formalProduct = categorizedData("Formal");
+    const bagProduct = categorizedData("Bag");
+    const casualProduct = categorizedData("Casual");
+    const beltProduct = categorizedData("Belt");
+
+    
 
     return (
         <Container>
             <Cover img={Productbanner} title={"Our Products"} />
             <SectionTitle sectionTitle="Todays Offer" />
-            <ProductSection items={product} />
-            <ProductSection items={product} img={formalBan} title={"Formal Shoes"}/>
-            <ProductSection items={product} img={bagBan} title={"Bags"}/>
-            <ProductSection items={product} img={casualBan} title={"Sport Shows"}/>
-            <ProductSection items={product} img={beltBan} title={"Leather  belts"}/>
+
+            <ProductSection items={formalProduct} img={formalBan} title={"Formal Shoes"} />
+            <ProductSection items={bagProduct} img={bagBan} title={"Bags"} />
+            <ProductSection items={casualProduct} img={casualBan} title={"Sport Shows"} />
+            <ProductSection items={beltProduct} img={beltBan} title={"Leather  belts"} />
         </Container>
     );
 };
