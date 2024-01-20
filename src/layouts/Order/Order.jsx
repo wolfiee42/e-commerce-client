@@ -6,6 +6,7 @@ import CategoriesData from "../../components/Category data/CategoriesData";
 import CategorySingle from "./CategorySingle";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
+import SingleProducts from "./SingleProducts";
 
 const Order = () => {
 
@@ -13,15 +14,14 @@ const Order = () => {
 
     const selectedTab = params.get("category");
 
-    const { data: product, refetch } = useQuery({
+    const { data: products, refetch } = useQuery({
         queryKey: ["order"],
         queryFn: async () => {
             const res = await axios.get(`http://localhost:8000/allproducts?category=${selectedTab}`);
             return res.data
         }
     })
-    refetch()
-    console.log(product);
+    refetch();
 
 
     return (
@@ -30,6 +30,12 @@ const Order = () => {
             <div className="pt-4 flex items-center justify-center gap-10">
                 {
                     CategoriesData.map((category, index) => <CategorySingle selected={selectedTab === category.label} key={index} category={category} />)
+                }
+            </div>
+
+            <div className="grid grid-cols-3 my-20 gap-10">
+                {
+                    products && products.map(product => <SingleProducts key={product._id} product={product} />)
                 }
             </div>
         </Container>
