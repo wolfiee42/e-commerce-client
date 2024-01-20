@@ -5,7 +5,7 @@ import Registration from "../layouts/Registration/Registration";
 import Login from "../layouts/Login/Login";
 import Products from "../layouts/Products/Products";
 import Order from "../layouts/Order/Order";
-
+import Dashboard from "../layouts/Dashboard/Dashboard"
 
 const router = createBrowserRouter([
     {
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />,
     },
+    {
+        path: '/dashboard',
+        element: <Dashboard />
+    }
 ]);
 
 export default router;
