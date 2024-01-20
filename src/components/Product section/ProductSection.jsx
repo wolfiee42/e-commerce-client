@@ -8,8 +8,8 @@ const ProductSection = ({ items, img, title }) => {
     const [route, setroute] = useState()
     useEffect(() => {
         items && items.map(item => setroute(item.classification))
-    })
-    console.log(route);
+    });
+    
     return (
         <div>
             {title && <Cover img={img} title={title} />}

@@ -28,7 +28,7 @@ const NavBar = () => {
                 backgroundColor: isActive ? "#636940" : "",
                 borderBottom: isActive ? "#474A2C solid 2px" : '',
                 opacity: isActive ? 1 : ""
-            })} to="/order">Order</NavLink>
+            })} to="/order?category=Formal">Order</NavLink>
         </li>
         {user && <li>
             <NavLink style={({ isActive }) => ({
