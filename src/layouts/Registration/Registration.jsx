@@ -42,12 +42,18 @@ const Registration = () => {
         const name = data.name;
         const email = data.email;
         const password = data.password;
-
+        const role = "User"
+        const user = { name, email, role }
         signup(email, password)
-            .then(res => {
+            .then(() => {
                 addProfileNameAndPicture(name, profilePicture)
-                navigate('/')
-                res.user && toast.success('User Created Successfully!')
+                axiosPublic.post('/users', user)
+                    .then(res => {
+                        if (res.data.insertedId) {
+                            navigate('/')
+                            res.user && toast.success('User Created Successfully!');
+                        }
+                    })
             })
             .catch(error => {
                 toast.error(error.message);
@@ -58,8 +64,16 @@ const Registration = () => {
     const googleLogin = () => {
         loginWithGoogle()
             .then(res => {
-                res.user && toast.success('User Logged in Successfully!')
-                navigate('/')
+                const name = res.user.displayName;
+                const email = res.user.email;
+                const role = "User"
+                const user = { name, email, role };
+                
+                axiosPublic.post('/users', user)
+                    .then(res => {
+                        res.data && toast.success('User Logged in Successfully!')
+                        navigate('/')
+                    })
             })
     }
 

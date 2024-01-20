@@ -7,12 +7,13 @@ import toast, { Toaster } from 'react-hot-toast';
 import Lottie from "react-lottie"
 import loginPic from "../../assets/login.json"
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-
+import useAxiosPublic from "../../utilities/useAxiosPublic";
 
 
 
 const Login = () => {
     const { loginUser, loginWithGoogle, loginWithFacebook } = useAuth();
+    const axiosPublic = useAxiosPublic();
     const navigate = useNavigate()
     const {
         register,
@@ -47,8 +48,16 @@ const Login = () => {
     const googleLogin = () => {
         loginWithGoogle()
             .then(res => {
-                res.user && toast.success('User Logged in Successfully!')
-                navigate('/')
+                const name = res.user.displayName;
+                const email = res.user.email;
+                const role = "User"
+                const user = { name, email, role };
+
+                axiosPublic.post('/users', user)
+                    .then(res => {
+                        res.data && toast.success('User Logged in Successfully!')
+                        navigate('/')
+                    })
             })
     }
 
