@@ -50,8 +50,9 @@ const Login = () => {
             .then(res => {
                 const name = res.user.displayName;
                 const email = res.user.email;
-                const role = "User"
-                const user = { name, email, role };
+                const role = "User";
+                const date = new Date();
+                const user = { name, email, role, date };
 
                 axiosPublic.post('/users', user)
                     .then(res => {

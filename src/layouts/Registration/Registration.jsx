@@ -42,8 +42,9 @@ const Registration = () => {
         const name = data.name;
         const email = data.email;
         const password = data.password;
-        const role = "User"
-        const user = { name, email, role }
+        const role = "User";
+        const date = new Date();
+        const user = { name, email, role, date }
         signup(email, password)
             .then(() => {
                 addProfileNameAndPicture(name, profilePicture)
@@ -66,9 +67,10 @@ const Registration = () => {
             .then(res => {
                 const name = res.user.displayName;
                 const email = res.user.email;
-                const role = "User"
-                const user = { name, email, role };
-                
+                const role = "User";
+                const date = new Date();
+                const user = { name, email, role, date };
+
                 axiosPublic.post('/users', user)
                     .then(res => {
                         res.data && toast.success('User Logged in Successfully!')

@@ -4,7 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 const Dashboard = () => {
     return (
         <div className="flex">
-            <ul className="menu w-1/6 bg-[#9BDEAC] min-h-screen p-5 gap-3">
+            <ul className="menu w-1/6 bg-[#75D18C] min-h-screen p-5 gap-3">
                 <li>
                     <NavLink style={({ isActive }) => ({
                         backgroundColor: isActive ? "#636940" : "",
