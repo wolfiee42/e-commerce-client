@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { MdDelete } from "react-icons/md";
 import useAxiosPublic from "../../../../utilities/useAxiosPublic";
 
@@ -15,6 +15,7 @@ const WishedProductSingle = ({ product }) => {
         axiosPublic.delete(`/wishlist?email=${email}&id=${_id}`)
             .then(res => {
                 if (res.data.deletedCount > 0) {
+                    toast.error("Item Removed from Wishlist");
                     window.location.reload();
                 }
             })
