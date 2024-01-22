@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from "../../../../utilities/useAxiosPublic"
 import useAuth from "../../../../utilities/useAuth";
 import SingleCartItem from './SingleCartItem';
-import { useEffect, useState } from 'react';
+import Checkout from './Checkout';
 
 
 
@@ -10,7 +10,7 @@ const Cart = () => {
     const axiosPublic = useAxiosPublic();
     const { user } = useAuth();
     const email = user?.email;
-    // const [totalDue, setTotalDue] = useState();
+
     const { data: products, refetch } = useQuery({
         queryKey: [email, 'cartedProduct'],
         queryFn: async () => {
@@ -18,9 +18,6 @@ const Cart = () => {
             return res.data;
         }
     });
-    useEffect(() => {
-        // products.map(product => setTotalDue(product))
-    }, [products]);
 
 
     return (
@@ -30,8 +27,8 @@ const Cart = () => {
                     products && products.map(product => <SingleCartItem key={product._id} product={product} email={email} refetch={refetch} />)
                 }
             </div>
-            <div className="col-span-2 bg-[#E6E8D9] h-[370px] m-5 rounded-lg flex items-start justify-center p-5">
-                hello
+            <div className="col-span-2 bg-[#E6E8D9] h-[370px] m-5 rounded-lg p-5">
+                <Checkout products={products} />
             </div>
         </div>
     );
