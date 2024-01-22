@@ -11,7 +11,10 @@ import Cart from "../layouts/Dashboard/UserDash/Cart/Cart"
 import Wishlist from "../layouts/Dashboard/UserDash/Wishlist/Wishlist"
 import Review from "../layouts/Dashboard/UserDash/Review/Review"
 import History from "../layouts/Dashboard/UserDash/History/History"
-
+import Manageproduct from "../layouts/Dashboard/AdminDash/Manage Product/Manageproduct";
+import Admin from "../layouts/Dashboard/AdminDash/Admin/Admin";
+import ManageUser from "../layouts/Dashboard/AdminDash/Manage User/ManageUser";
+import AddProduct from "../layouts/Dashboard/AdminDash/Add product/AddProduct"
 
 
 const router = createBrowserRouter([
@@ -60,22 +63,22 @@ const router = createBrowserRouter([
 
 
             // admin
-            // {
-            //     path: '/dashboard/wishlist',
-            //     element: 
-            // },
-            // {
-            //     path: '/dashboard/wishlist',
-            //     element: 
-            // },
-            // {
-            //     path: '/dashboard/wishlist',
-            //     element: 
-            // },
-            // {
-            //     path: '/dashboard/wishlist',
-            //     element: 
-            // },
+            {
+                path: '/dashboard/admin/adminprofile',
+                element: <Admin />
+            },
+            {
+                path: '/dashboard/admin/manageuser',
+                element: <ManageUser />
+            },
+            {
+                path: '/dashboard/admin/manageproduct',
+                element: <Manageproduct />
+            },
+            {
+                path: '/dashboard/admin/addproduct',
+                element: <AddProduct />
+            },
         ]
     }
 ]);

@@ -3,10 +3,16 @@ import Container from "../Container/Container";
 import useAuth from "../../utilities/useAuth";
 import Lottie from "react-lottie"
 import userPic from "../../assets/user.json"
+import useVerifyAdmin from "../../utilities/useVerifyAdmin";
 
 
 const NavBar = () => {
+
+
     const { user, userLogout } = useAuth();
+    const [isAdmin] = useVerifyAdmin(false);
+    console.log(isAdmin);
+
 
     const navitems = <>
         <li>
@@ -30,13 +36,26 @@ const NavBar = () => {
                 opacity: isActive ? 1 : ""
             })} to="/order?category=Formal">Order</NavLink>
         </li>
-        {user && <li>
-            <NavLink style={({ isActive }) => ({
-                backgroundColor: isActive ? "#636940" : "",
-                borderBottom: isActive ? "#474A2C solid 2px" : '',
-                opacity: isActive ? 1 : ""
-            })} to="/dashboard">Dashboard</NavLink>
-        </li>}
+        {
+            user && isAdmin &&
+            <li>
+                <NavLink style={({ isActive }) => ({
+                    backgroundColor: isActive ? "#636940" : "",
+                    borderBottom: isActive ? "#474A2C solid 2px" : '',
+                    opacity: isActive ? 1 : ""
+                })} to="/dashboard/admin/adminprofile">Dashboard</NavLink>
+            </li>
+        }
+        {
+            user && !isAdmin &&
+            <li>
+                <NavLink style={({ isActive }) => ({
+                    backgroundColor: isActive ? "#636940" : "",
+                    borderBottom: isActive ? "#474A2C solid 2px" : '',
+                    opacity: isActive ? 1 : ""
+                })} to="/dashboard/cart">Dashboard</NavLink>
+            </li>
+        }
         {!user && <li>
             <NavLink style={({ isActive }) => ({
                 backgroundColor: isActive ? "#636940" : "",

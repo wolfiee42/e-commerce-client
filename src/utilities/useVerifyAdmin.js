@@ -14,7 +14,7 @@ const useVerifyAdmin = () => {
         queryKey: [user?.email, "isAdmin"],
         queryFn: async () => {
             const res = await axiosPublic.get(`/users?email=${email}`)
-            return res.data.role;
+            return res.data;
         }
     });
     return [isAdmin, isAdminLoading];
