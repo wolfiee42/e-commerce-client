@@ -7,7 +7,7 @@ const Dashboard = () => {
     console.log(isAdmin);
     return (
         <div className="flex">
-            {isAdmin && isAdmin === true ?
+            {/* {isAdmin && isAdmin === true && */}
                 <ul className="menu w-1/6 bg-[#E6E8D9] min-h-screen p-5 gap-3">
                     <li>
                         <NavLink style={({ isActive }) => ({
@@ -45,7 +45,7 @@ const Dashboard = () => {
                         })} to="/dashboard/admin/addproduct"><FaCommentAlt className="text-xl" /> Add Product</NavLink>
                     </li>
                 </ul>
-                :
+                {/* :
 
                 <ul className="menu w-1/6 bg-[#E6E8D9] min-h-screen p-5 gap-3">
                     <li>
@@ -90,7 +90,7 @@ const Dashboard = () => {
                             opacity: isActive ? 1 : ""
                         })} to="/dashboard/history"><FaHistory className="text-xl" /> History</NavLink>
                     </li>
-                </ul>}
+                </ul> */}
             <div className="w-5/6">
                 <Outlet />
             </div>
