@@ -1,16 +1,21 @@
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import animation from "../../../../../public/addproduct.json";
 import Lottie from 'react-lottie';
 import { useForm } from "react-hook-form";
 import { FaCirclePlus } from "react-icons/fa6";
-import { useState } from "react";
+import useAxiosPublic from "../../../../utilities/useAxiosPublic";
 
 
 
 
 const AddProduct = () => {
-    const [selectedvalue, setSelectedValue] = useState('');
-    const { register, handleSubmit } = useForm();
+
+    const { register, handleSubmit, reset } = useForm();
+    const axiosPublic = useAxiosPublic();
+    const imgHostingkey = import.meta.env.VITE_imgKey;
+    const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingkey}`;
+
+
 
     const defaultOptions = {
         loop: true,
@@ -20,12 +25,34 @@ const AddProduct = () => {
             preserveAspectRatio: 'xMidYMid slice'
         }
     };
-    const handleCategory = (e) => {
-        setSelectedValue(e.target.value)
-    }
-    console.log(selectedvalue);
-    const onSubmit = data => {
-        console.log(data);
+
+
+    const onSubmit = async (data) => {
+        const imageFile = { image: data.image[0] };
+        const res = await axiosPublic.post(imgHostingApi, imageFile, {
+            headers: {
+                "Content-Type": "multipart/form-data"
+            }
+        })
+        const priceint = parseInt(data.price);
+
+        const product = {
+            name: data.name,
+            price: priceint,
+            classification: data.category,
+            image: res.data.data.display_url,
+            desc: data.desc
+        }
+        if (res.data.data.display_url) {
+            axiosPublic.post("/addingproduct", product)
+                .then(res => {
+                    if (res.data.insertedId) {
+                        toast.success("Product Uploaded In the Database Successfully!");
+                        reset();
+                    }
+                })
+        }
+
     }
 
 
@@ -60,7 +87,7 @@ const AddProduct = () => {
                                 <label className="pl-4">
                                     <p>Category</p>
                                 </label>
-                                <select value={selectedvalue} onChange={handleCategory} className="select w-full min-w-[220px] mx-auto min-h-12 px-5 rounded-lg border-b-[2px] border-b-[#E6E8D9] border-l-4 border-l-[#E6E8D9] mt-1 bg-slate-50">
+                                <select {...register("category")} className="select w-full min-w-[220px] mx-auto min-h-12 px-5 rounded-lg border-b-[2px] border-b-[#E6E8D9] border-l-4 border-l-[#E6E8D9] mt-1 bg-slate-50">
                                     <option disabled selected>Select Category</option>
                                     <option value={"Formal"}>Formal Shoes</option>
                                     <option value={"Bag"}>Bags</option>
