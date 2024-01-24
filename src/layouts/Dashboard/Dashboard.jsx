@@ -8,7 +8,7 @@ const Dashboard = () => {
     return (
         <div className="flex">
             {isAdmin && isAdmin === true ?
-                <ul className="menu w-1/6 bg-[#75D18C] min-h-screen p-5 gap-3">
+                <ul className="menu w-1/6 bg-[#E6E8D9] min-h-screen p-5 gap-3">
                     <li>
                         <NavLink style={({ isActive }) => ({
                             backgroundColor: isActive ? "#636940" : "",
@@ -47,7 +47,7 @@ const Dashboard = () => {
                 </ul>
                 :
 
-                <ul className="menu w-1/6 bg-[#75D18C] min-h-screen p-5 gap-3">
+                <ul className="menu w-1/6 bg-[#E6E8D9] min-h-screen p-5 gap-3">
                     <li>
                         <NavLink style={({ isActive }) => ({
                             backgroundColor: isActive ? "#636940" : "",

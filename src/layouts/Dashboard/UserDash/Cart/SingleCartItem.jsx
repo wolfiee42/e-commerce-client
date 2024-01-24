@@ -22,7 +22,7 @@ const SingleCartItem = ({ product, email, refetch }) => {
 
 
     return (
-        <div className="w-full bg-[#E0F5EB] py-5 rounded-md hover:shadow-lg flex justify-between">
+        <div className="w-full h-[200px] bg-[#E0F5EB] py-5 rounded-md hover:shadow-lg flex justify-between">
             <img src={image} className="w-[150px] h-[150px] rounded-md ml-10" alt="" />
             <div className="flex-grow flex flex-col">
                 <div className="flex item-center justify-between text-base font-semibold px-8 pt-2">

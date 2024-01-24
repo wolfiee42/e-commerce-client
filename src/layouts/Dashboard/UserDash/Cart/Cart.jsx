@@ -22,7 +22,7 @@ const Cart = () => {
 
     return (
         <div className="grid grid-cols-5">
-            <div className="col-span-3 grid grid-cols-1 bg-[#E6E8D9] h-[calc(100vh-40px)] overflow-y-auto p-5 rounded-lg m-5  gap-3 ">
+            <div className={`col-span-3 grid grid-cols-1 bg-[#E6E8D9] ${products?.length > 3 ? "h-[calc(100vh-40px)] " : ""} overflow-y-auto p-5 rounded-lg m-5  gap-3`}>
                 {
                     products && products.map(product => <SingleCartItem key={product._id} product={product} email={email} refetch={refetch} />)
                 }
