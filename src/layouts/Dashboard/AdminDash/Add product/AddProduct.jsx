@@ -60,7 +60,7 @@ const AddProduct = () => {
         <div className="flex flex-col items-center h-screen justify-center">
             <h1 className="text-4xl font-semibold text-zinc-600">Add A <span className="text-[#CED0C4]">Product</span></h1>
             <div className="flex flex-row justify-center items-center bg-white">
-                <div className="w-1/3">
+                <div className="w-full">
                     <Lottie options={defaultOptions} />
                 </div>
                 <div>
