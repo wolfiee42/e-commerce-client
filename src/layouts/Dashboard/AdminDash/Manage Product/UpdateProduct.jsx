@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import useAxiosPublic from "../../../../utilities/useAxiosPublic";
 import { useForm } from "react-hook-form";
 import { FaCirclePlus } from "react-icons/fa6";
 import updateproduct from "../../../../../public/updateproduct.json"
 import Lottie from 'react-lottie';
+import toast from "react-hot-toast";
 
 
 
@@ -16,7 +17,7 @@ const UpdateProduct = () => {
     const axiosPublic = useAxiosPublic();
     const [params, setParams] = useSearchParams();
     const id = params.get("id");
-
+    const navigate = useNavigate();
 
     const { data: productInfo, isLoading, refetch } = useQuery({
         queryKey: ["singleProduct"],
@@ -37,17 +38,35 @@ const UpdateProduct = () => {
     };
 
 
-    const { register, handleSubmit, reset } = useForm({
+    const { register, handleSubmit } = useForm({
         defaultValues: {
-            name: productInfo?.name,
-            price: productInfo?.price,
-            category: productInfo?.classification,
-            desc: productInfo?.desc,
-            image: productInfo?.image,
+            name: productInfo.name,
+            price: productInfo.price,
+            category: productInfo.classification,
+            desc: productInfo.desc,
         }
     });
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        const upgradedProduct = {
+            name: data.name,
+            price: data.price,
+            classification: data.category,
+            desc: data.desc,
+            image: productInfo.image
+        }
+        axiosPublic.patch(`/updatingproduct?id=${id}`, upgradedProduct)
+            .then(res => {
+                if (res.data.modifiedCount > 0) {
+                    toast.success("item Upgraded Successfully!")
+                    navigate('/dashboard/admin/manageproduct')
+                }
+            })
+    }
 
+
+    if (isLoading) {
+        return <div className="flex items-center justify-center h-screen w-full"><span className="loading loading-dots loading-lg"></span></div>
+    }
 
 
     return (
@@ -95,7 +114,7 @@ const UpdateProduct = () => {
                         <label className="pl-4">
                             <p>Product Image</p>
                         </label>
-                        <input  {...register("image")} type="file" placeholder="Your Name" className=" min-w-[480px] mx-auto min-h-12 pt-2 px-5 rounded-lg border-b-[2px] border-b-[#E6E8D9] border-l-4 border-l-[#E6E8D9] mt-1 bg-slate-50" required />
+                        <input disabled type="file" placeholder="Your Name" className=" min-w-[480px] mx-auto min-h-12 pt-2 px-5 rounded-lg border-b-[2px] border-b-[#E6E8D9] border-l-4 border-l-[#E6E8D9] mt-1 bg-slate-50" required />
                     </div>
 
                     <div className="form-control mt-2">

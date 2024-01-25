@@ -20,8 +20,8 @@ const Manageproduct = () => {
     const handleDelete = _id => {
         axiosPublic.delete(`/deleteitem?id=${_id}`)
             .then(res => {
-                if (res.data.deletedCount) {
-                    toast.error("Item Has Been Deleted.")
+                if (res.data.deletedCount > 0) {
+                    toast.error("Item has been Deleted.")
                     refetch();
                 }
             })
