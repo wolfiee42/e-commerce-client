@@ -15,6 +15,9 @@ import Manageproduct from "../layouts/Dashboard/AdminDash/Manage Product/Managep
 import Admin from "../layouts/Dashboard/AdminDash/Admin/Admin";
 import ManageUser from "../layouts/Dashboard/AdminDash/Manage User/ManageUser";
 import AddProduct from "../layouts/Dashboard/AdminDash/Add product/AddProduct"
+import UpdateProduct from "../layouts/Dashboard/AdminDash/Manage Product/UpdateProduct";
+
+
 
 
 const router = createBrowserRouter([
@@ -39,46 +42,22 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <Dashboard />,
         children: [
+
+
             // user
-            {
-                path: '/dashboard/user',
-                element: <User />
-            },
-            {
-                path: '/dashboard/cart',
-                element: <Cart />
-            },
-            {
-                path: '/dashboard/wishlist',
-                element: <Wishlist />
-            },
-            {
-                path: '/dashboard/review',
-                element: <Review />
-            },
-            {
-                path: '/dashboard/history',
-                element: <History />
-            },
+            { path: '/dashboard/user', element: <User /> },
+            { path: '/dashboard/cart', element: <Cart /> },
+            { path: '/dashboard/wishlist', element: <Wishlist /> },
+            { path: '/dashboard/review', element: <Review /> },
+            { path: '/dashboard/history', element: <History /> },
 
 
             // admin
-            {
-                path: '/dashboard/admin/adminprofile',
-                element: <Admin />
-            },
-            {
-                path: '/dashboard/admin/manageuser',
-                element: <ManageUser />
-            },
-            {
-                path: '/dashboard/admin/manageproduct',
-                element: <Manageproduct />
-            },
-            {
-                path: '/dashboard/admin/addproduct',
-                element: <AddProduct />
-            },
+            { path: '/dashboard/admin/adminprofile', element: <Admin /> },
+            { path: '/dashboard/admin/manageuser', element: <ManageUser /> },
+            { path: '/dashboard/admin/manageproduct', element: <Manageproduct /> },
+            { path: '/dashboard/admin/manageproduct/updateproduct', element: <UpdateProduct /> },
+            { path: '/dashboard/admin/addproduct', element: <AddProduct /> },
         ]
     }
 ]);

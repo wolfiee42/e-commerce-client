@@ -2,7 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../../../utilities/useAxiosPublic";
 import { LiaEdit } from "react-icons/lia";
 import { MdDeleteOutline } from "react-icons/md";
-
+import { Link } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Manageproduct = () => {
     const axiosPublic = useAxiosPublic();
@@ -15,6 +16,16 @@ const Manageproduct = () => {
         }
     });
 
+
+    const handleDelete = _id => {
+        axiosPublic.delete(`/deleteitem?id=${_id}`)
+            .then(res => {
+                if (res.data.deletedCount) {
+                    toast.error("Item Has Been Deleted.")
+                    refetch();
+                }
+            })
+    }
 
     if (isLoading) {
         return <div className="w-full h-screen flex items-center justify-center"> <span className="loading loading-dots loading-lg"></span></div>
@@ -45,14 +56,22 @@ const Manageproduct = () => {
                                 <td>{product?.name}</td>
                                 <td>{product?.classification}</td>
                                 <td>$ {product?.price}</td>
-                                <td> <button className="btn hover:bg-green-400 hover:text-white"><LiaEdit className="text-xl" /></button></td>
-                                <td><button className="btn hover:bg-red-500 hover:text-white"> <MdDeleteOutline className="text-xl" /></button></td>
+                                <td>
+                                    <Link to={`/dashboard/admin/manageproduct/updateproduct?id=${product?._id}`} className="btn hover:bg-green-400 hover:text-white"><LiaEdit className="text-xl" /></Link>
+                                </td>
+                                <td>
+                                    <button onClick={() => handleDelete(product?._id)} className="btn hover:bg-red-500 hover:text-white"> <MdDeleteOutline className="text-xl" /></button>
+                                </td>
                             </tr></>)
                         }
 
                     </tbody>
                 </table>
             </div>
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
         </div>
     );
 };
