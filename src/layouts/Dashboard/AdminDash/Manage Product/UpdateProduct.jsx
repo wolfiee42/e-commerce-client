@@ -40,10 +40,10 @@ const UpdateProduct = () => {
 
     const { register, handleSubmit } = useForm({
         defaultValues: {
-            name: productInfo.name,
-            price: productInfo.price,
-            category: productInfo.classification,
-            desc: productInfo.desc,
+            name: productInfo?.name,
+            price: productInfo?.price,
+            category: productInfo?.classification,
+            desc: productInfo?.desc,
         }
     });
     const onSubmit = data => {
@@ -59,6 +59,7 @@ const UpdateProduct = () => {
                 if (res.data.modifiedCount > 0) {
                     toast.success("item Upgraded Successfully!")
                     navigate('/dashboard/admin/manageproduct')
+                    refetch();
                 }
             })
     }

@@ -50,7 +50,7 @@ const Manageproduct = () => {
                     </thead>
                     <tbody>
                         {
-                            allProducts?.map((product, ind) => <><tr key={ind}>
+                            allProducts?.map((product, ind) => <tr key={product._id}>
                                 <td>{ind + 1}</td>
                                 <td><img src={product?.image} className="h-14 w-14 rounded-md" alt="" /></td>
                                 <td>{product?.name}</td>
@@ -62,7 +62,7 @@ const Manageproduct = () => {
                                 <td>
                                     <button onClick={() => handleDelete(product?._id)} className="btn hover:bg-red-500 hover:text-white"> <MdDeleteOutline className="text-xl" /></button>
                                 </td>
-                            </tr></>)
+                            </tr>)
                         }
 
                     </tbody>
