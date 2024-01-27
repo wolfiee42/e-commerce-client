@@ -1,8 +1,13 @@
+import useAuth from '../../../../utilities/useAuth';
+
+
+
 
 const Admin = () => {
+    const { user } = useAuth();
     return (
         <div>
-            from admin profile
+            <h1>{user.displayName}</h1>
         </div>
     );
 };
