@@ -1,13 +1,17 @@
-import { FaCommentAlt, FaHeart, FaHistory, FaHome, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaCommentAlt, FaHeart, FaHistory, FaHome, FaShoppingCart, FaSitemap, FaUser } from "react-icons/fa";
+import { FaCirclePlus } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import useVerifyAdmin from "../../utilities/useVerifyAdmin";
+import { PiUsersFourFill } from "react-icons/pi";
+
+
 
 const Dashboard = () => {
     const [isAdmin] = useVerifyAdmin();
     console.log(isAdmin);
     return (
         <div className="flex">
-            {/* {isAdmin && isAdmin === true && */}
+            {isAdmin  ?
                 <ul className="menu w-1/6 bg-[#E6E8D9] min-h-screen p-5 gap-3">
                     <li>
                         <NavLink style={({ isActive }) => ({
@@ -28,24 +32,24 @@ const Dashboard = () => {
                             backgroundColor: isActive ? "#636940" : "",
                             borderBottom: isActive ? "#474A2C solid 2px" : '',
                             opacity: isActive ? 1 : ""
-                        })} to="/dashboard/admin/manageuser"><FaShoppingCart className="text-xl" /> Manage User</NavLink>
+                        })} to="/dashboard/admin/manageuser"><PiUsersFourFill className="text-xl" /> Manage User</NavLink>
                     </li>
                     <li>
                         <NavLink style={({ isActive }) => ({
                             backgroundColor: isActive ? "#636940" : "",
                             borderBottom: isActive ? "#474A2C solid 2px" : '',
                             opacity: isActive ? 1 : ""
-                        })} to="/dashboard/admin/manageproduct"><FaHeart className="text-xl" /> Manage Product</NavLink>
+                        })} to="/dashboard/admin/manageproduct"><FaSitemap className="text-xl" /> Manage Product</NavLink>
                     </li>
                     <li>
                         <NavLink style={({ isActive }) => ({
                             backgroundColor: isActive ? "#636940" : "",
                             borderBottom: isActive ? "#474A2C solid 2px" : '',
                             opacity: isActive ? 1 : ""
-                        })} to="/dashboard/admin/addproduct"><FaCommentAlt className="text-xl" /> Add Product</NavLink>
+                        })} to="/dashboard/admin/addproduct"><FaCirclePlus className="text-lg" /> Add Product</NavLink>
                     </li>
                 </ul>
-                {/* :
+                :
 
                 <ul className="menu w-1/6 bg-[#E6E8D9] min-h-screen p-5 gap-3">
                     <li>
@@ -90,7 +94,7 @@ const Dashboard = () => {
                             opacity: isActive ? 1 : ""
                         })} to="/dashboard/history"><FaHistory className="text-xl" /> History</NavLink>
                     </li>
-                </ul> */}
+                </ul>}
             <div className="w-5/6">
                 <Outlet />
             </div>

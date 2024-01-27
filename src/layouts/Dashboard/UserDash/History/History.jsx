@@ -2,8 +2,8 @@
 
 const History = () => {
     return (
-        <div>
-            from history
+        <div className="p-10 text-2xl">
+            Coming Soon... 
         </div>
     );
 };

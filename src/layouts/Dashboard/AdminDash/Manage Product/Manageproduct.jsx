@@ -32,7 +32,7 @@ const Manageproduct = () => {
     }
 
     return (
-        <div className="m-10">
+        <div className="m-10 shadow-lg rounded-lg">
             <div></div>
             <div className="overflow-x-auto border-2 rounded-lg p-5">
                 <table className="table table-zebra">

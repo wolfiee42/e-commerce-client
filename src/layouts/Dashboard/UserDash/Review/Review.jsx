@@ -3,13 +3,23 @@ import { IoSend } from "react-icons/io5";
 import useAuth from "../../../../utilities/useAuth";
 import useAxiosPublic from "../../../../utilities/useAxiosPublic";
 import toast, { Toaster } from "react-hot-toast";
+import reviewAnimation from '../../../../assets/review.json'
+import Lottie from 'react-lottie';
+
 
 const Review = () => {
 
     const { user } = useAuth();
     const { displayName, email } = user;
     const axiosPublic = useAxiosPublic();
-
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: reviewAnimation,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
     const { register, handleSubmit } = useForm({
         defaultValues: {
             name: displayName,
@@ -32,11 +42,11 @@ const Review = () => {
 
 
     return (
-        <div>
-            <div>
-
+        <div className="flex justify-center items-center gap-3">
+            <div className="w-1/3">
+                <Lottie options={defaultOptions} />
             </div>
-            <div className=" w-[600px] h-[800px] bg-[#E6E8D9] m-10">
+            <div className=" w-[600px] h-[800px] bg-[#E6E8D9] m-10 rounded-lg">
                 <h1 className="card-body flex-row font-semibold text-4xl">Give Us Your <span className="text-[#6BB379]"> Feedback</span></h1>
                 <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-control mt-2">

@@ -44,8 +44,7 @@ const ManageUser = () => {
     }
 
     return (
-        <div className="m-10">
-            <div></div>
+        <div className="m-10 shadow-lg rounded-lg">
             <div className="overflow-x-auto border-2 rounded-lg p-5">
                 <table className="table table-zebra">
                     {/* head */}

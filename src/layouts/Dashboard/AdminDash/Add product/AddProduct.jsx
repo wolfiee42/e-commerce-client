@@ -15,8 +15,6 @@ const AddProduct = () => {
     const imgHostingkey = import.meta.env.VITE_imgKey;
     const imgHostingApi = `https://api.imgbb.com/1/upload?key=${imgHostingkey}`;
 
-
-
     const defaultOptions = {
         loop: true,
         autoplay: true,

@@ -4,7 +4,7 @@ import useAuth from "../../utilities/useAuth";
 import Lottie from "react-lottie"
 import userPic from "../../assets/user.json"
 import useVerifyAdmin from "../../utilities/useVerifyAdmin";
-
+import logo from '../../assets/img/logoWebsite.png'
 
 const NavBar = () => {
 
@@ -37,7 +37,7 @@ const NavBar = () => {
             })} to="/order?category=Formal">Order</NavLink>
         </li>
         {
-            user && isAdmin &&
+            user && !!isAdmin &&
             <li>
                 <NavLink style={({ isActive }) => ({
                     backgroundColor: isActive ? "#636940" : "",
@@ -97,7 +97,9 @@ const NavBar = () => {
                             {navitems}
                         </ul>
                     </div>
-                    <a className="font-semibold text-xl hover:cursor-pointer">daisyUI</a>
+                    <div className="w-20">
+                        <img src={logo} alt="" />
+                    </div>
                 </div>
                 <div className="navbar-center hidden md:flex">
                     <ul className="menu menu-horizontal px-1">
