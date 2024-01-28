@@ -25,18 +25,20 @@ const Products = () => {
     const casualProduct = categorizedData("Casual");
     const beltProduct = categorizedData("Belt");
 
-    
+
 
     return (
-        <Container>
+        <div>
             <Cover img={Productbanner} title={"Our Products"} />
+
             <SectionTitle sectionTitle="Todays Offer" />
 
             <ProductSection items={formalProduct} img={formalBan} title={"Formal Shoes"} />
             <ProductSection items={bagProduct} img={bagBan} title={"Bags"} />
             <ProductSection items={casualProduct} img={casualBan} title={"Sport Shows"} />
             <ProductSection items={beltProduct} img={beltBan} title={"Leather  belts"} />
-        </Container>
+
+        </div>
     );
 };
 

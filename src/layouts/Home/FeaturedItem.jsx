@@ -29,8 +29,8 @@ const FeaturedItem = () => {
 
 
     return (
-        <Container>
-            <div style={backgroundIMage} className="min-h-fit my-4 md:my-8 lg:my-10">
+        <div style={backgroundIMage} className="min-h-fit my-4 md:my-8 lg:my-10 bg-cover">
+            <Container>
                 <div>
                     <div className="md:pt-[30px] md:pb-[50px] lg:pt-[50px] lg:pb-[100px]">
                         <SectionTitle sectionTitle="Order Now" />
@@ -47,8 +47,8 @@ const FeaturedItem = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </Container>
+            </Container>
+        </div>
     );
 };
 

@@ -6,7 +6,6 @@ import PreFooter from "./PreFooter";
 import ProductSample from "./ProductSample";
 import Review from "./Review";
 
-
 const Home = () => {
     return (
         <div>

@@ -13,7 +13,7 @@ const ProductSection = ({ items, img, title }) => {
     return (
         <div>
             {title && <Cover img={img} title={title} />}
-            <div className="grid grid-cols-2 gap-2 my-10">
+            <div className="grid grid-cols-2 gap-2 my-10 max-w-7xl mx-auto">
                 {
                     items && items.map((item, ind) => <ProductSampleSingle key={ind} product={item} />)
                 }

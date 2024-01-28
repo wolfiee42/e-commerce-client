@@ -25,20 +25,22 @@ const Order = () => {
 
 
     return (
-        <Container>
+        <div>
             <Cover img={orderpic} title={"Our Shop"} />
-            <div className="pt-10 flex items-center justify-center gap-10">
-                {
-                    CategoriesData.map((category, index) => <CategorySingle selected={selectedTab === category.label} key={index} category={category} />)
-                }
-            </div>
+            <Container>
+                <div className="pt-10 flex items-center justify-center gap-10">
+                    {
+                        CategoriesData.map((category, index) => <CategorySingle selected={selectedTab === category.label} key={index} category={category} />)
+                    }
+                </div>
 
-            <div className="grid grid-cols-3 my-20 gap-10">
-                {
-                    products && products.map(product => <SingleProducts key={product._id} product={product} />)
-                }
-            </div>
-        </Container>
+                <div className="grid grid-cols-3 my-20 gap-10">
+                    {
+                        products && products.map(product => <SingleProducts key={product._id} product={product} />)
+                    }
+                </div>
+            </Container>
+        </div>
     );
 };
 
