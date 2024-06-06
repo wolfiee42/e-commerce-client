@@ -17,7 +17,7 @@ const Order = () => {
     const { data: products, refetch } = useQuery({
         queryKey: ["order"],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:8000/allproducts?category=${selectedTab}`);
+            const res = await axios.get(`https://e-commerce-server-ivory-nine.vercel.app/allproducts?category=${selectedTab}`);
             return res.data
         }
     })

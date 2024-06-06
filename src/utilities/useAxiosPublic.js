@@ -1,10 +1,10 @@
-import axios from "axios"
+import axios from "axios";
 const AxiosPublic = axios.create({
-    baseURL: "http://localhost:8000/"
-})
+  baseURL: "https://e-commerce-server-ivory-nine.vercel.app/",
+});
 
 const useAxiosPublic = () => {
-    return AxiosPublic;
+  return AxiosPublic;
 };
 
 export default useAxiosPublic;
