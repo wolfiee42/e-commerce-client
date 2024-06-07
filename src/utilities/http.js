@@ -1,12 +1,12 @@
 import axios from "axios";
 
 export const productSample = async () => {
-  const res = await axios.get("../../public/productSample.json");
+  const res = await axios.get("./productSample.json");
   return res.data;
 };
 
 export const reviews = async () => {
-  const res = await axios.get("../../public/review.json");
+  const res = await axios.get("./review.json");
   return res.data;
 };
 

@@ -1,26 +1,26 @@
 [
     {
-        "image": "../src/assets/belt.png",
+        "image": "https://i.ibb.co/sFyqmFV/belt.png",
         "name": "Item 1",
         "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum reiciendis eaque eligendi. Possimus omnis soluta.",
         "price": 24.99
     },
     {
-        "image": "../src/assets/bag.png",
+        "image": "https://i.ibb.co/9n961M8/bag.png",
         "name": "Item 2",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero libero, tempora velit pariatur nobis cupiditate cum.",
         "price": 24.99
     },
     {
-        "image": "../src/assets/sandal.png",
+        "image": "https://i.ibb.co/cXmthYY/sandal.png",
         "name": "Item 3",
         "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eveniet.",
         "price": 24.99
     },
     {
-        "image": "../src/assets/formal.png",
+        "image": "https://i.ibb.co/4sG7Rz5/formal.png",
         "name": "Item 4",
         "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, labore alias. Omnis id minima labore?",
-          "price": 24.99
+        "price": 24.99
     }
 ]
